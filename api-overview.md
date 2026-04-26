@@ -58,7 +58,7 @@ System routes (`/api/*`, `/webhooks/*`, `/sitemap.xml`, `/robots.txt`,
 Per-IP rate limits apply on:
 - `/api/auth/login` — 1 req/10s, burst 5
 - `/api/auth/signup` — 1 req/20s, burst 3
-- `/api/billing/webhook`, `/webhooks/stripe` — 2 req/s
+- `/webhooks/stripe` — 2 req/s
 
 ## Schema.org markup
 
