@@ -65,7 +65,6 @@ Path-prefix routing means each locale lives at its own URL:
 - https://getsnapaudit.com/es/
 - https://getsnapaudit.com/fr/
 - https://getsnapaudit.com/de/
-- https://getsnapaudit.ru/ru/
 
 ---
 
