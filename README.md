@@ -30,11 +30,6 @@ event, err := webhook.ConstructEventWithOptions(
 )
 ```
 
-### `api-overview.md`
-
-High-level overview of SnapAudit's public API surface for operators
-building integrations against the platform.
-
 ---
 
 ## Pricing
