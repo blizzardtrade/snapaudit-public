@@ -10,7 +10,6 @@ integration examples, API references, and Stripe webhook setup helpers
 for self-hosted integrations with the platform.
 
 🔗 **Product:** https://getsnapaudit.com
-🔗 **Russian market:** https://getsnapaudit.ru
 🔗 **Sales:** [hello@getsnapaudit.com](mailto:hello@getsnapaudit.com)
 
 ---
@@ -54,11 +53,7 @@ for full details.
 
 ## Localization
 
-SnapAudit's marketing site is available in:
-
-- **getsnapaudit.com** — English, Spanish, French, German
-- **getsnapaudit.ru** — Russian, Belarusian, Kazakh
-
+SnapAudit is available in English, Spanish, French, and German.
 Path-prefix routing means each locale lives at its own URL:
 
 - https://getsnapaudit.com/en/

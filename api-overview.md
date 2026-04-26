@@ -6,8 +6,7 @@ are not covered here.
 
 ## Base URL
 
-- Production (global): `https://getsnapaudit.com`
-- Production (RU market): `https://getsnapaudit.ru`
+- Production: `https://getsnapaudit.com`
 
 ## Authentication
 
@@ -21,7 +20,7 @@ integrations, contact [Enterprise sales](mailto:hello@getsnapaudit.com).
 
 | Path | Purpose |
 |------|---------|
-| `/{lang}/` | Landing page (per-locale: en/es/fr/de on .com; ru/be/kk on .ru) |
+| `/{lang}/` | Landing page (per-locale: en/es/fr/de) |
 | `/{lang}/login.html` | Sign-in / sign-up form |
 | `/{lang}/signup` | Redirects to `/login.html#signup` |
 | `/{lang}/offer` | Terms of Service |
@@ -31,7 +30,7 @@ integrations, contact [Enterprise sales](mailto:hello@getsnapaudit.com).
 
 | Path | Purpose |
 |------|---------|
-| `/sitemap.xml` | Per-domain XML sitemap with hreflang xhtml:link alternates and image:image entries |
+| `/sitemap.xml` | XML sitemap with hreflang xhtml:link alternates and image:image entries |
 | `/robots.txt` | Crawl rules + AI bot blocklist |
 | `/{key}.txt` | IndexNow verification file (Bing/Yandex/Naver/Seznam) |
 
@@ -40,7 +39,6 @@ integrations, contact [Enterprise sales](mailto:hello@getsnapaudit.com).
 | Path | Purpose |
 |------|---------|
 | `/webhooks/stripe` | Stripe subscription events (HMAC-verified) |
-| `/api/billing/webhook` | T-Bank Kassa events for ru market (Token-verified) |
 
 ## Locale resolution
 
@@ -50,7 +48,7 @@ request's locale is set to that lang. Without a prefix, public pages
 
 1. `?lang=xx` query param
 2. `locale` cookie
-3. `CF-IPCountry` header → mapped locale (KZ→kk, BY→be, ES→es, FR→fr, DE→de, fallback en)
+3. `CF-IPCountry` header → mapped locale (ES→es, FR→fr, DE→de, fallback en)
 
 System routes (`/api/*`, `/webhooks/*`, `/sitemap.xml`, `/robots.txt`,
 `/css/*`, `/js/*`, `/app`) bypass the redirect logic.
