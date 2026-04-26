@@ -1,34 +1,53 @@
-# SnapAudit — Public Resources
+# SnapAudit
 
-[**SnapAudit**](https://getsnapaudit.com) is an AI-graded photographic audit
-platform for 5S, Lean, and GxP compliance programs. Operators photograph
-their workstation at end of shift; the model compares the image to your
-reference library and annotates every deviation directly on the image.
-
-This repository hosts public-facing resources for the SnapAudit product —
-integration examples, API references, and Stripe webhook setup helpers
-for self-hosted integrations with the platform.
+[**SnapAudit**](https://getsnapaudit.com) is an AI-graded photographic
+audit platform for workplace standards — 5S, Lean, GxP, and operational
+hygiene programs. Operators photograph their workstation at end of shift;
+the model compares each image against your reference library and
+annotates every deviation directly on the photo.
 
 🔗 **Product:** https://getsnapaudit.com
 🔗 **Sales:** [hello@getsnapaudit.com](mailto:hello@getsnapaudit.com)
 
 ---
 
-## What's in here
+## Who it's for
 
-### `stripe-webhook-example/`
+SnapAudit fits operations teams that already run shift-end audits and
+want them faster, more consistent, and trackable over time:
 
-A minimal Go example showing how to verify Stripe webhook signatures
-when integrating SnapAudit's Enterprise tier with your billing pipeline.
-Uses [`stripe-go/v82`](https://github.com/stripe/stripe-go) and follows
-the same HMAC verification pattern as our production handler.
+- **Manufacturing** — workstation cleanliness, tool placement, 5S compliance
+- **Hospitality** — kitchen sanitation, front-of-house standards, closing checks
+- **Healthcare & GxP** — regulated cleaning rounds, equipment positioning,
+  documentation-grade audit trail
+- **Retail** — display compliance, back-of-store organization, restocking
+- **Auto service** — bay cleanliness, tool boards, fluid containment
+- **Warehouses** — aisle clearance, label accuracy, pallet positioning
 
-```go
-event, err := webhook.ConstructEventWithOptions(
-    body, sig, secret,
-    webhook.ConstructEventOptions{IgnoreAPIVersionMismatch: true},
-)
-```
+If you currently keep shift-end checks on paper or spreadsheets, SnapAudit
+replaces them with AI-graded photo evidence in seconds.
+
+[See the live industry gallery →](https://getsnapaudit.com/en/#gallery)
+
+---
+
+## What it does
+
+1. **Reference library.** Snap a photo of "what good looks like" for each
+   control point — a clean station, a stocked shelf, an organized tool
+   board. No labeling, no training data needed.
+2. **Operator photo.** End of shift, the operator opens the app in any
+   browser and snaps the same control point.
+3. **AI grading.** The model returns a 0–100 score and draws coloured
+   bounding boxes on every deviation it finds — missing tools, dirt,
+   misplaced items, clutter, wrong orientation.
+4. **History + Pareto.** Aggregate by location, control point, or
+   inspector to surface the chronic 20% of issues causing 80% of failures.
+
+No app installation for operators. No model training. No external
+hardware — any phone with a camera works.
+
+[Read the FAQ →](https://getsnapaudit.com/en/#faq)
 
 ---
 
@@ -40,31 +59,19 @@ event, err := webhook.ConstructEventWithOptions(
 | **Pro** | $299/month | 5,000 included, $0.10 each after | Multi-site teams |
 | **Enterprise** | Custom | Custom volume | Regulated operations |
 
-14-day free trial on every plan + 30 free AI inspections without a
-credit card. See [getsnapaudit.com/en/#pricing](https://getsnapaudit.com/en/#pricing)
-for full details.
+14-day free trial on every plan, plus 30 free AI inspections without a
+credit card to evaluate before subscribing.
 
----
-
-## Localization
-
-SnapAudit is available in English, Spanish, French, and German.
-Path-prefix routing means each locale lives at its own URL:
-
-- https://getsnapaudit.com/en/
-- https://getsnapaudit.com/es/
-- https://getsnapaudit.com/fr/
-- https://getsnapaudit.com/de/
+[Compare plans →](https://getsnapaudit.com/en/#pricing)
 
 ---
 
 ## License
 
-Code in this repository: MIT.
-SnapAudit product (proprietary, not in this repo).
+Content in this repository: MIT.
+SnapAudit product: proprietary, not in this repo.
 
 ## Contact
 
-- Sales / Enterprise pricing: [hello@getsnapaudit.com](mailto:hello@getsnapaudit.com)
-- Technical questions about the public examples: open a GitHub issue
-- Product feedback: [hello@getsnapaudit.com](mailto:hello@getsnapaudit.com)
+- **Sales / Enterprise:** [hello@getsnapaudit.com](mailto:hello@getsnapaudit.com)
+- **Product:** https://getsnapaudit.com
